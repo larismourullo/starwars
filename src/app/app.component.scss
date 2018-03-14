@@ -1,0 +1,16 @@
+@import '~scss/functions';
+@import '~scss/keyframes';
+@import '~scss/variables';
+@import '~scss/mixins';
+
+.starOne {
+  @include animationStars(1px, $shadows-small, 50s);
+}
+
+.starTwo {
+  @include animationStars(2px, $shadows-medium, 100s);
+}
+
+.starThree {
+  @include animationStars(3px, $shadows-big, 150s);
+}
