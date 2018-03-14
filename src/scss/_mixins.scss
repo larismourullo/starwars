@@ -1,0 +1,22 @@
+@mixin oficialFontStyle() {
+  color: $white;
+  font-family: $font-raleway;
+}
+
+@mixin animationStars($size, $shadow, $time) {
+  width: $size;
+  height: $size;
+  background: transparent;
+  box-shadow: $shadow;
+  animation: animStar $time linear infinite;
+  
+  &:after {
+    content: " ";
+    position: absolute;
+    top: 2000px;
+    width: $size;
+    height: $size;
+    background: transparent;
+    box-shadow: $shadow;
+  }
+}

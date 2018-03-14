@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700');
+@import '~scss/functions';
+@import '~scss/keyframes';
+@import '~scss/variables';
+@import '~scss/mixins';
+
+html {
+  height: 100%;
+  background: #000;
+  overflow: hidden;
+  @include oficialFontStyle();
+}
+
+button {
+	padding: 0.7rem 0rem;
+	width: 95%;
+	border: 1px solid $red;
+	margin-top: 2.5rem;
+	background: transparent;
+  text-transform: uppercase;
+  font-size: 1rem;
+	font-weight: $weight-semibold;
+  letter-spacing: 2px;
+  @include oficialFontStyle();
+}
+
+.align-center-div {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr;
+}
