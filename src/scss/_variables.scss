@@ -1,5 +1,6 @@
 $font-raleway: 'Raleway', sans-serif;
 
+$black: #000000;
 $white: #FFFFFF;
 $yellow: #FFE62C;
 $red: #dc1716;
@@ -15,3 +16,5 @@ $weight-extrabold: 700;
 $shadows-small: multiple-box-shadow(700);
 $shadows-medium: multiple-box-shadow(200);
 $shadows-big: multiple-box-shadow(100);
+
+$rotateAnimation: sk-rotateplane 1.2s infinite ease-in-out;
