@@ -1,6 +1,7 @@
-@mixin oficialFontStyle() {
-  color: $white;
-  font-family: $font-raleway;
+@mixin fontStyle($color, $size, $weight) {
+  color: $color;
+  font-size: $size;
+  font-weight: $weight;
 }
 
 @mixin animationStars($size, $shadow, $time) {

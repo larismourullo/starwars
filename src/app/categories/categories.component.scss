@@ -1,7 +1,6 @@
 @import '~scss/variables';
+@import '~scss/mixins';
 
-h2 {
-  color: $yellow;
-  font-size: 1.25rem;
-  font-weight: $weight-semibold;
+.section__title {
+  @include fontStyle($yellow, 1.25rem, $weight-semibold);
 }
