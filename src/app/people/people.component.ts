@@ -10,22 +10,28 @@ import { Subscription } from 'rxjs/Subscription';
 export class PeopleComponent implements OnInit {
   person: any;
   loading: boolean;
+  category = "people";
 
   constructor(private dataService: DataService) { }
 
   ngOnInit() {
-    this.getPeople();
+    this.getRandomPerson();
   }
-  
-  getPeople() {
+
+  getRandomPerson() {
     this.loading = true;
-    this.dataService.getAllCategoryData('people')
-      .subscribe(data => this.getPerson(data.count));
-  }
 
-  getPerson(num: number) {
-    this.dataService.getCategoryDataById('people', 1)
-      .subscribe(data => {this.person = data; this.loading = false;});
-  }
+    this.dataService.getPageData(this.category, 1).subscribe(data => {
+      let peoplePerPage = data['results'].length;
+      let randonPersonPosition = Math.floor((Math.random() * data['count']) + 1);
+      let randomIndex = randonPersonPosition - 1;
+      let positionAtPage = randomIndex - ((Math.ceil(randonPersonPosition / peoplePerPage) - 1) * peoplePerPage);
+      let randomPersonPage = Math.ceil(randonPersonPosition / peoplePerPage);
 
+      this.dataService.getPageData(this.category, randomPersonPage).subscribe(data => {
+        this.person = data['results'][positionAtPage];       
+        this.loading = false;
+      });
+    });
+  }
 }
