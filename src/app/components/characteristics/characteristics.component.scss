@@ -1,0 +1,6 @@
+@import '~scss/variables';
+@import '~scss/mixins';
+
+.characteristics {
+  @include fontStyle($red, 1rem, $weight-semibold);
+}
