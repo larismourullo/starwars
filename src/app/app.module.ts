@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { ROUTING } from './app.routes';
+import { AppRouting } from './app.routes';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -18,6 +18,7 @@ import { SpeciesComponent } from './species/species.component';
 import { PlanetsComponent } from './planets/planets.component';
 import { CharacteristicsComponent } from './components/characteristics/characteristics.component';
 import { NameComponent } from './components/name/name.component';
+import { ShellComponent } from './shell/shell.component';
 
 @NgModule({
   declarations: [
@@ -33,12 +34,13 @@ import { NameComponent } from './components/name/name.component';
     SpeciesComponent,
     PlanetsComponent,
     CharacteristicsComponent,
-    NameComponent
+    NameComponent,
+    ShellComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    ROUTING,
+    AppRouting,
     BrowserAnimationsModule
   ],
   providers: [DataService],
