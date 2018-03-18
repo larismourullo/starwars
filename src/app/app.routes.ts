@@ -10,13 +10,13 @@ import { SpeciesComponent } from './species/species.component';
 import { PlanetsComponent } from './planets/planets.component';
 
 export const AppRoutes: Routes = [
-  { path: '', component: HeaderComponent },
-  { path: 'categories', component: CategoriesComponent },
-  { path: 'people', component: PeopleComponent },
-  { path: 'starships', component: StarshipsComponent },
-  { path: 'vehicles', component: VehiclesComponent },
-  { path: 'species', component: SpeciesComponent },
-  { path: 'planets', component: PlanetsComponent },
+  { path: 'starwars', component: HeaderComponent },
+  { path: 'starwars/categories', component: CategoriesComponent },
+  { path: 'starwars/people', component: PeopleComponent },
+  { path: 'starwars/starships', component: StarshipsComponent },
+  { path: 'starwars/vehicles', component: VehiclesComponent },
+  { path: 'starwars/species', component: SpeciesComponent },
+  { path: 'starwars/planets', component: PlanetsComponent },
 ];
 
 export const ROUTING: ModuleWithProviders = RouterModule.forRoot(AppRoutes);
