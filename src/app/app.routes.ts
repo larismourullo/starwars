@@ -1,5 +1,7 @@
+import { ShellComponent } from './shell/shell.component';
+import { NgModule } from '@angular/core';
+
 import { RouterModule, Routes } from '@angular/router';
-import { ModuleWithProviders } from '@angular/core/src/metadata/ng_module';
 import { CategoriesComponent } from './categories/categories.component';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -9,14 +11,31 @@ import { VehiclesComponent } from './vehicles/vehicles.component';
 import { SpeciesComponent } from './species/species.component';
 import { PlanetsComponent } from './planets/planets.component';
 
-export const AppRoutes: Routes = [
-  { path: 'starwars', component: HeaderComponent },
-  { path: 'starwars/categories', component: CategoriesComponent },
-  { path: 'starwars/people', component: PeopleComponent },
-  { path: 'starwars/starships', component: StarshipsComponent },
-  { path: 'starwars/vehicles', component: VehiclesComponent },
-  { path: 'starwars/species', component: SpeciesComponent },
-  { path: 'starwars/planets', component: PlanetsComponent },
+const children: Routes = [
+  { path: '', component: HeaderComponent },
+  { path: 'categories', component: CategoriesComponent },
+  { path: 'people', component: PeopleComponent },
+  { path: 'starships', component: StarshipsComponent },
+  { path: 'vehicles', component: VehiclesComponent },
+  { path: 'species', component: SpeciesComponent },
+  { path: 'planets', component: PlanetsComponent },
 ];
 
-export const ROUTING: ModuleWithProviders = RouterModule.forRoot(AppRoutes);
+const AppRoutes: Routes = [
+  {
+    path: '',
+    pathMatch: 'full',
+    redirectTo: 'starwars'
+  },
+  {
+    path: 'starwars',
+    component: ShellComponent,
+    children
+  }
+];
+
+@NgModule({
+  imports: [RouterModule.forRoot(AppRoutes)],
+  exports: [RouterModule],
+})
+export class AppRouting { }
