@@ -9,11 +9,13 @@ import 'rxjs/add/operator/catch';
 export class DataService {
   url = 'https://swapi.co/api/';
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   getPageData(category: string, pageNumber: number) {
-    return this.http.get(this.url + category + "/?page=" + pageNumber)
-      .map(data => { return data; });
+    return this.http
+      .get(this.url + category + '/?page=' + pageNumber)
+      .map(data => {
+        return data;
+      });
   }
-
 }

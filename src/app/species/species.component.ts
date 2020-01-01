@@ -10,9 +10,9 @@ import { Subscription } from 'rxjs/Subscription';
 export class SpeciesComponent implements OnInit {
   specie: any;
   loading: boolean;
-  category = "species";
+  category = 'species';
 
-  constructor(private dataService: DataService) { }
+  constructor(private dataService: DataService) {}
 
   ngOnInit() {
     this.getRandomSpecie();
@@ -23,15 +23,19 @@ export class SpeciesComponent implements OnInit {
 
     this.dataService.getPageData(this.category, 1).subscribe(data => {
       let speciesPerPage = data['results'].length;
-      let randomSpeciePosition = Math.floor((Math.random() * data['count']) + 1);
+      let randomSpeciePosition = Math.floor(Math.random() * data['count'] + 1);
       let randomIndex = randomSpeciePosition - 1;
-      let positionAtPage = randomIndex - ((Math.ceil(randomSpeciePosition / speciesPerPage) - 1) * speciesPerPage);
+      let positionAtPage =
+        randomIndex -
+        (Math.ceil(randomSpeciePosition / speciesPerPage) - 1) * speciesPerPage;
       let randomSpeciePage = Math.ceil(randomSpeciePosition / speciesPerPage);
 
-      this.dataService.getPageData(this.category, randomSpeciePage).subscribe(data => {
-        this.specie = data['results'][positionAtPage];
-        this.loading = false;
-      });
+      this.dataService
+        .getPageData(this.category, randomSpeciePage)
+        .subscribe(data => {
+          this.specie = data['results'][positionAtPage];
+          this.loading = false;
+        });
     });
   }
 }

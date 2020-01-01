@@ -10,9 +10,9 @@ import { Subscription } from 'rxjs/Subscription';
 export class PlanetsComponent implements OnInit {
   planet: any;
   loading: boolean;
-  category = "planets";
+  category = 'planets';
 
-  constructor(private dataService: DataService) { }
+  constructor(private dataService: DataService) {}
 
   ngOnInit() {
     this.getRandomPlanet();
@@ -23,15 +23,19 @@ export class PlanetsComponent implements OnInit {
 
     this.dataService.getPageData(this.category, 1).subscribe(data => {
       let planetsPerPage = data['results'].length;
-      let randomPlanetPosition = Math.floor((Math.random() * data['count']) + 1);
+      let randomPlanetPosition = Math.floor(Math.random() * data['count'] + 1);
       let randomIndex = randomPlanetPosition - 1;
-      let positionAtPage = randomIndex - ((Math.ceil(randomPlanetPosition / planetsPerPage) - 1) * planetsPerPage);
+      let positionAtPage =
+        randomIndex -
+        (Math.ceil(randomPlanetPosition / planetsPerPage) - 1) * planetsPerPage;
       let randomPlanetPage = Math.ceil(randomPlanetPosition / planetsPerPage);
 
-      this.dataService.getPageData(this.category, randomPlanetPage).subscribe(data => {
-        this.planet = data['results'][positionAtPage];
-        this.loading = false;
-      });
+      this.dataService
+        .getPageData(this.category, randomPlanetPage)
+        .subscribe(data => {
+          this.planet = data['results'][positionAtPage];
+          this.loading = false;
+        });
     });
   }
 }

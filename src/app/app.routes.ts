@@ -1,6 +1,5 @@
 import { ShellComponent } from './shell/shell.component';
 import { NgModule } from '@angular/core';
-
 import { RouterModule, Routes } from '@angular/router';
 import { CategoriesComponent } from './categories/categories.component';
 import { AppComponent } from './app.component';
@@ -18,7 +17,7 @@ const children: Routes = [
   { path: 'starships', component: StarshipsComponent },
   { path: 'vehicles', component: VehiclesComponent },
   { path: 'species', component: SpeciesComponent },
-  { path: 'planets', component: PlanetsComponent },
+  { path: 'planets', component: PlanetsComponent }
 ];
 
 const AppRoutes: Routes = [
@@ -36,6 +35,6 @@ const AppRoutes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(AppRoutes)],
-  exports: [RouterModule],
+  exports: [RouterModule]
 })
-export class AppRouting { }
+export class AppRouting {}

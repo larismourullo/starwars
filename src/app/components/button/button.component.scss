@@ -2,10 +2,10 @@
 @import '~scss/mixins';
 
 .button {
-	padding: 0.7rem 0rem;
+  padding: 0.7rem 0rem;
   width: 28rem;
-	border: 1px solid $red;	
-	background: transparent;
+  border: 1px solid $red;
+  background: transparent;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-family: $font-raleway;
@@ -49,11 +49,13 @@
   transition-timing-function: ease-out;
 }
 
-.button--rectangle-out:hover, .button--rectangle-out:active {
+.button--rectangle-out:hover,
+.button--rectangle-out:active {
   color: $white;
 }
 
-.button--rectangle-out:hover:before, .button--rectangle-out:active:before {
+.button--rectangle-out:hover:before,
+.button--rectangle-out:active:before {
   -webkit-transform: scale(1);
   transform: scale(1);
 }

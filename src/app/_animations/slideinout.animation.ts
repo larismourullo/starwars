@@ -1,17 +1,26 @@
 // import the required animation functions from the angular animations module
-import { trigger, state, animate, transition, style } from '@angular/animations';
- 
+import {
+  trigger,
+  state,
+  animate,
+  transition,
+  style
+} from '@angular/animations';
+
 export const slideInOutAnimation = trigger('slideInOutAnimation', [
   // end state styles for route container (host)
-  state('*', style({
-    // the view covers the whole screen with a semi tranparent background
-    position: 'fixed',
-    top: 0,
-    left: 0,
-    right: 0,
-    bottom: 0,
-    backgroundColor: 'rgba(0, 0, 0, 0.8)'
-  })),
+  state(
+    '*',
+    style({
+      // the view covers the whole screen with a semi tranparent background
+      position: 'fixed',
+      top: 0,
+      left: 0,
+      right: 0,
+      bottom: 0,
+      backgroundColor: 'rgba(0, 0, 0, 0.8)'
+    })
+  ),
 
   // route 'enter' transition
   transition(':enter', [
@@ -26,24 +35,30 @@ export const slideInOutAnimation = trigger('slideInOutAnimation', [
     }),
 
     // animation and styles at end of transition
-    animate('.5s ease-in-out', style({
+    animate(
+      '.5s ease-in-out',
+      style({
         // transition the right position to 0 which slides the content into view
         right: 0,
 
         // transition the background opacity to 0.8 to fade it in
         backgroundColor: 'rgba(0, 0, 0, 0.8)'
-    }))
+      })
+    )
   ]),
 
   // route 'leave' transition
   transition(':leave', [
     // animation and styles at end of transition
-    animate('.5s ease-in-out', style({
+    animate(
+      '.5s ease-in-out',
+      style({
         // transition the right position to -400% which slides the content out of view
         right: '-400%',
 
         // transition the background opacity to 0 to fade it out
         backgroundColor: 'rgba(0, 0, 0, 0)'
-    }))
+      })
+    )
   ])
 ]);

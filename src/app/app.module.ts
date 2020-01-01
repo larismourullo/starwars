@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { AppRouting } from './app.routes';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
 import { AppComponent } from './app.component';
 import { ButtonComponent } from './components/button/button.component';
 import { CategoriesComponent } from './categories/categories.component';
@@ -46,4 +45,4 @@ import { ShellComponent } from './shell/shell.component';
   providers: [DataService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
