@@ -12,6 +12,12 @@ import { FooterComponent } from './components/footer/footer.component';
 import { DataService } from './services/data.service';
 import { PeopleComponent } from './people/people.component';
 import { LoadingComponent } from './components/loading/loading.component';
+import { StarshipsComponent } from './starships/starships.component';
+import { VehiclesComponent } from './vehicles/vehicles.component';
+import { SpeciesComponent } from './species/species.component';
+import { PlanetsComponent } from './planets/planets.component';
+import { CharacteristicsComponent } from './components/characteristics/characteristics.component';
+import { NameComponent } from './components/name/name.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +27,13 @@ import { LoadingComponent } from './components/loading/loading.component';
     HeaderComponent,
     FooterComponent,
     PeopleComponent,
-    LoadingComponent
+    LoadingComponent,
+    StarshipsComponent,
+    VehiclesComponent,
+    SpeciesComponent,
+    PlanetsComponent,
+    CharacteristicsComponent,
+    NameComponent
   ],
   imports: [
     BrowserModule,

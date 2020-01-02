@@ -11,12 +11,9 @@ export class DataService {
 
   constructor(private http: HttpClient) { }
 
-  getAllCategoryData(category) {
-    return this.http.get(this.url + category).map(data => { return data;});
-  }
-
-  getCategoryDataById(category, number) {
-    return this.http.get(this.url + category + "/" + number).map(data => { return data;});
+  getPageData(category: string, pageNumber: number) {
+    return this.http.get(this.url + category + "/?page=" + pageNumber)
+      .map(data => { return data; });
   }
 
 }
