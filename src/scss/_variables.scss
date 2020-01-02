@@ -18,3 +18,9 @@ $shadows-medium: multiple-box-shadow(200);
 $shadows-big: multiple-box-shadow(100);
 
 $rotateAnimation: sk-rotateplane 1.2s infinite ease-in-out;
+
+$break-extra-small: 576px;
+$break-small: 576px;
+$break-medium: 768px;
+$break-large: 992px;
+$break-extra-large: 1200px;
