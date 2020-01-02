@@ -1,0 +1,39 @@
+<sw-loading class="section--align-center" *ngIf="loading"></sw-loading>
+
+<section class="section--align-center" *ngIf="!loading">
+  <sw-name>{{ planet.name }}</sw-name>
+
+  <div class="category">
+    <p class="category__paragraph">
+      <sw-characteristics>Diameter:</sw-characteristics>
+      {{ planet.diameter }}
+    </p>
+    <p class="category__paragraph">
+      <sw-characteristics>Climate:</sw-characteristics>
+      {{ planet.climate }}
+    </p>
+    <p class="category__paragraph">
+      <sw-characteristics>Gravity:</sw-characteristics>
+      {{ planet.gravity }}
+    </p>
+    <p class="category__paragraph">
+      <sw-characteristics>Terrain:</sw-characteristics>
+      {{ planet.terrain }}
+    </p>
+    <p class="category__paragraph">
+      <sw-characteristics>Surface Water:</sw-characteristics>
+      {{ planet.surface_water }}
+    </p>
+    <p class="category__paragraph">
+      <sw-characteristics>Population:</sw-characteristics>
+      {{ planet.population }}
+    </p>
+    <p class="category__paragraph--yellow">
+      Featured in {{ planet.films?.length }} {{planet.films?.length === 1 ? 'film' : 'films'}}.
+    </p>
+  </div>
+  <sw-button (click)="getRandomPlanet();">Select New Random Planet</sw-button>
+  <sw-button [routerLink]="['/categories']">🡠 Back to Categories</sw-button>
+</section>
+
+<sw-footer></sw-footer>
