@@ -1,12 +1,15 @@
 @import '~scss/variables';
 @import '~scss/mixins';
 
-footer {
+.footer {
   position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
   margin-bottom: 15px;
   text-align: center;
+}
+
+.footer__small {
   font-size: 0.625rem;
 }
