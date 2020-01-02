@@ -1,0 +1,12 @@
+@import '~scss/variables';
+@import '~scss/mixins';
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 0.625rem;
+}
