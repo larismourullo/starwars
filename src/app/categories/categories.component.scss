@@ -1,6 +1,0 @@
-@import '~scss/variables';
-@import '~scss/mixins';
-
-.section__title {
-  @include fontStyle($yellow, 1.25rem, $weight-semibold);
-}
