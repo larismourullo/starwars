@@ -9,14 +9,15 @@ html {
   height: 100%;
   background: $black;
   overflow: hidden;
-  @include oficialFontStyle();
+  font-family: $font-raleway;
+  @include fontStyle($white, 1rem, $weight-regular);
 }
 
 sw-button {
   margin-top: 1.5rem;
 }
 
-.align-center-div {
+.section--align-center {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -26,3 +27,26 @@ sw-button {
   display: grid;
   grid-template-columns: 1fr;
 }
+
+.category {
+  border: 1px solid $yellow;
+  background-color: $black;
+  display: grid;
+  padding: 1.25rem;
+  width: 25.375rem;
+
+  @media screen and (max-width: $break-extra-small) {
+    width: 14.375rem;
+  }
+}
+
+.category__paragraph {
+  text-align: left;
+  margin-bottom: 0.4375rem;
+  text-transform: capitalize;
+}
+
+.category__paragraph--yellow {
+  margin-top: 0.857rem;
+  @include fontStyle($yellow, 1rem, $weight-semibold);
+} 
