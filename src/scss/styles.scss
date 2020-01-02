@@ -3,25 +3,17 @@
 @import '~scss/keyframes';
 @import '~scss/variables';
 @import '~scss/mixins';
+@import '~scss/reset';
 
 html {
   height: 100%;
-  background: #000;
+  background: $black;
   overflow: hidden;
   @include oficialFontStyle();
 }
 
-button {
-	padding: 0.7rem 0rem;
-	width: 95%;
-	border: 1px solid $red;
-	margin-top: 2.5rem;
-	background: transparent;
-  text-transform: uppercase;
-  font-size: 1rem;
-	font-weight: $weight-semibold;
-  letter-spacing: 2px;
-  @include oficialFontStyle();
+sw-button {
+  margin-top: 1.5rem;
 }
 
 .align-center-div {

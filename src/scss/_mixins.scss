@@ -20,3 +20,8 @@
     box-shadow: $shadow;
   }
 }
+
+@mixin rotateAnimation($x, $y) {
+  transform: perspective(120px) rotateX($x) rotateY($y);
+  -webkit-transform: perspective(120px) rotateX($x) rotateY($y) 
+}
