@@ -32,7 +32,8 @@
       Featured in {{ person.films?.length }} {{person.films?.length === 1 ? 'film' : 'films'}}.
     </h4>
   </div>
-  <sw-button (click)="getPeople();">Next</sw-button>
+  <sw-button (click)="getPeople();">Select New Random Character</sw-button>
+  <sw-button [routerLink]="['/categories']">🡠 Back to Categories</sw-button>
 </section>
 
 <sw-footer></sw-footer>
