@@ -13,6 +13,7 @@
 - [Novos Componentes](#novos-componentes)
 - [Versão Compilada](#versão-compilada)
 - [Testes](#testes)
+- [Outras Informações](#outras-informações)
 
 ## Visão Geral do Projeto
 O principal objetivo do desafio é o desenvolvimento de uma aplicação que servisse como cola para um jogo que consiste em descobrir um determinado planeta aleatório da fraquia Star Wars, fazendo perguntas sobre o mesmo. Estas perguntas seriam, por exemplo, qual o clima do local, o tipo de terreno, quantos filmes da franquia o local apareceu etc. A ideia é criar algo parecido com o *mockup* disponível nesse [link](https://gallery.mailchimp.com/690273598e6b17ca3a786d15d/images/e3bed735-b74c-454c-a125-6fcb8520c15b.png).
