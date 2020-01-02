@@ -73,8 +73,6 @@ ng generate component component-name | ng g c component-name
 ```
 Você também pode usar ng generate `directive | pipe | service | class | guard | interface | enum | module`
 
-Execute ng buildpara criar o projeto. Os artefatos de construção serão armazenados no dist/diretório. Use o -prodsinalizador para uma compilação de produção.
-
 ## Versão Compilada
 Para a criação da versão compilada do seu código rode o comando a seguir:
 ``` node
