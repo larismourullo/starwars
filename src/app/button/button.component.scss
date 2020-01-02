@@ -1,6 +1,18 @@
 @import '~scss/variables';
 @import '~scss/mixins';
 
+button {
+	padding: 0.7rem 0rem;
+  width: 28rem;
+	border: 1px solid $red;	
+	background: transparent;
+  text-transform: uppercase;
+  font-size: 1rem;
+	font-weight: $weight-semibold;
+  letter-spacing: 2px;
+  @include oficialFontStyle();
+}
+
 .hvr-rectangle-out {
   display: inline-block;
   vertical-align: middle;
@@ -8,7 +20,7 @@
   transform: perspective(1px) translateZ(0);
   box-shadow: 0 0 1px transparent;
   position: relative;
-  background: transparent;
+  background: $black;
   -webkit-transition-property: color;
   transition-property: color;
   -webkit-transition-duration: 0.3s;
@@ -34,11 +46,11 @@
   transition-timing-function: ease-out;
 }
 
-.hvr-rectangle-out:hover, .hvr-rectangle-out:focus, .hvr-rectangle-out:active {
+.hvr-rectangle-out:hover, .hvr-rectangle-out:active {
   color: $white;
 }
 
-.hvr-rectangle-out:hover:before, .hvr-rectangle-out:focus:before, .hvr-rectangle-out:active:before {
+.hvr-rectangle-out:hover:before, .hvr-rectangle-out:active:before {
   -webkit-transform: scale(1);
   transform: scale(1);
 }
