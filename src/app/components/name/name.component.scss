@@ -1,0 +1,9 @@
+@import '~scss/variables';
+@import '~scss/mixins';
+
+.name {
+  background-color: $yellow;
+  padding: 0.875rem;
+  text-transform: uppercase;
+  @include fontStyle($black, 1.25rem, $weight-extrabold);
+}
