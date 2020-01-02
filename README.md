@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://image.ibb.co/hODEEc/sdfsfsfdsf.png" alt="Cabeçalho do Desafio Mundipagg"/>
+  <img src="https://image.ibb.co/m3cPEc/dsfsfsfsfdfsf.png" alt="Cabeçalho do Star Wars Game"/>
 </p>
 
 ## Conteúdo
