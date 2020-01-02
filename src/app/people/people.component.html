@@ -1,0 +1,38 @@
+<sw-loading class="align-center-div" *ngIf="loading"></sw-loading>
+
+<section class="align-center-div" *ngIf="!loading">
+  <h3>{{ person.name }}</h3>
+
+  <div class="category">
+    <p>
+      <span class="subcategory">Height:</span>
+      {{ person.height }}
+    </p>
+    <p>
+      <span class="subcategory">Mass:</span>
+      {{ person.mass }}
+    </p>
+    <p>
+      <span class="subcategory">Hair Color:</span>
+      {{ person.hair_color }}
+    </p>
+    <p>
+      <span class="subcategory">Skin Color:</span>
+      {{ person.skin_color }}
+    </p>
+    <p>
+      <span class="subcategory">Eye Color:</span>
+      {{ person.eye_color }}
+    </p>
+    <p>
+      <span class="subcategory">Gender:</span>
+      {{ person.gender }}
+    </p>
+    <h4>
+      Featured in {{ person.films?.length }} {{person.films?.length === 1 ? 'film' : 'films'}}.
+    </h4>
+  </div>
+  <sw-button (click)="getPeople();">Next</sw-button>
+</section>
+
+<sw-footer></sw-footer>
